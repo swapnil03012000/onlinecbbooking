@@ -1,0 +1,102 @@
+<!-- <script>
+  function myfunction()
+  {   
+    var input1=document.getElementById("txt");
+    var span1=document.getElementById("spn");
+    if(input1.value =="")
+    {
+      span1.innerText="Enter correct Name";
+      //alert("Enter correct Name");
+    }
+    var input2=document.getElementById("pwd");
+    var span2=document.getElementById("spn1");
+    if(input2.value =="")
+    {
+      span2.innerText="Enter correct password";
+      //alert("Enter correct password");
+    }
+  }
+</script> -->
+<!-- <div class="a">
+<div class="div1">
+<div class="login-box">
+
+<img src="/assets/index.png" class="index"><br>
+<h1 style="font-size: 40px;">LOGIN</h1>
+<br><br>
+<form #myForm="ngForm" (ngSubmit)="login(myForm)" role="form">
+    <p style="font-size: 25px">Username:</p>
+      <input type="text" ngModel name="username" required="required" placeholder="Enter Username" id="txt">	
+      <span id="spn" style="color:red"></span>	
+  <br><br>
+    <p style="font-size: 25px">Password:</p>
+      <input type="password" ngModel name="password" required="required" placeholder="Enter Password" id="pwd">
+      <span id="spn1" style="color:red"></span><br><br>		<br>
+  
+        <input type="submit" name="submit" routerLink="/AfterMainHome" value="Login"> 
+<br><br>
+      <p style="font-size: 20px"><a routerLink="/forgetpassword">Forget Password</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a routerLink="/register">  Register</a>
+</form>
+</div>
+</div>
+</div> -->
+
+<div style="background-image: url('../../assets/cab1.gif'); background-size: cover; height: 920px; width: 100%; float: left; background-repeat: no-repeat;">
+  <div class="col-md-4"></div>
+  <div class="col-md-4" >
+    
+  <form #myForm="ngForm" (ngSubmit)="login(myForm)" role="form">
+    <br>
+    <legend><b>Sign In</b></legend>
+  
+    <button (click)="switchLanguage('en')">English</button>
+    <button (click)="switchLanguage('ge')">German</button>
+    <button (click)="switchLanguage('hi')">Hindi</button>
+
+    <div class="form-group">
+      <label for="EmailId"><h1>{{ "EmailId" | translate }}</h1></label>
+      <input ngModel type="text" class="form-control" id="EmailId" required email name="EmailId__" #EmailId="ngModel" #spy>
+      <div *ngIf="EmailId.invalid && (EmailId.dirty || EmailId.touched || EmailId.pristine)" class="alert alert-danger">
+        <div *ngIf="EmailId.errors.required">
+            Email id is required.
+        </div>
+        <div *ngIf="EmailId.errors.email">
+            Email Id must be valid.
+        </div>
+    </div>   
+    </div>
+  
+    <div class="form-group">
+        <label for="Password"><h1>{{ "Password" | translate }}</h1></label>
+        <input ngModel type="password" class="form-control" id="Password" required minlength="4" maxlength="15" name="Password" #Password="ngModel" #spy>
+        <div *ngIf="Password.invalid && (Password.dirty || Password.touched || Password.pristine)" class="alert alert-danger">
+          <div *ngIf="Password.errors.required">
+              Password is required.
+          </div>
+          <div *ngIf="Password.errors.minlength">
+              Password must be at least 4 characters long. 
+          </div>
+      </div>   
+    </div>
+    
+  <div>
+    <input type="checkbox" name="remember" id="" placeholder="Remember me next-time">Remember me Next-Time
+  </div>
+  
+  <div>
+  <!-- <a href="/ChangePassword">Forgot Password </a> -->
+  <a href="/forgetpassword">Forgot Password </a>
+  </div>
+  <div>
+    <button type="submit"  [disabled]="!myForm.form.valid" class="btn btn-primary" style="align-content: center;">Sign In</button> &nbsp;
+    <button type="reset" [routerLink] ="['/ChangePassword']" class="btn btn-primary" style="align-content: center;"> Reset </button>
+  
+  </div>
+  
+  <span>
+    {{message}}
+  </span>
+  </form>
+  </div>
+  </div>

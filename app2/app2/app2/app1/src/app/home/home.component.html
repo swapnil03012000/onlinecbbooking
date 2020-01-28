@@ -1,0 +1,125 @@
+
+<div class="div2" style="background: url('/assets/s.jpg');opacity: 0.9;background-color: rgb(245, 12, 51);height: 250px;width: 100%;opacity: 0.8;;position: relative;margin: 0px;top: 0px">
+    <br/><br>
+      <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+       style="margin: 10px;color: white;font-size: 40px;text-align: center">
+    <b>Book a City Taxi to your destination in town</b></h1>
+
+    <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+       style="margin: 10px;color:aqua;font-size: 30px;text-align: center">
+    <b>Choose from a range of categories and prices</b></h1>
+    <!-- <h2>Choose from a range of categories and prices</h2> -->
+    <br> 
+    <form #myForm="ngForm" (ngSubmit)="search(myForm)" role="form">
+    <table class="div3" border="0.3" style="position: absolute;left: 10%;">
+     
+      <tr>
+        <td><input type="text" ngModel name="city" placeholder="PICKUP LOCATION"></td>
+        <td><input type="text" ngModel name="city" placeholder="DROP LOCATION"></td>
+        <!-- <td><input type="date" ngModel name="date" ></td> -->
+        <td><select aria-placeholder="Choose Cab Type" ngModel name="select"  style="height: 61px;width: 400px;font-size: 30px;background-color: white " >
+          <option value="" disabled selected>Choose Cab Type</option>
+          <option>Micro</option>
+          <option>Mini</option>
+          <option>Prime Sedan</option>
+          <option>Prme SUV</option>
+        </select>
+          </td>
+          <td><input type="submit" value="Search" style="height: 62px;width: 200px;background-color:rgb(40, 219, 40)"></td>
+      </tr>
+    </table>
+    </form>
+    </div>
+    <!-- <div *ngIf="show" style="width: 100%;background-color: white;position: relative;top: -20px">
+    
+      <div id="slider" style="position: absolute;border-radius: 100px;top: 40px;width: 100%;height: 1000px;">
+      <figure>
+          <img src="/src/assets/cab.gif" alt>
+      <img src="/src/assets/cab1.gif" alt>
+      <img src="/src/assets/cab2.jpg" alt>
+      <img src="/src/assets/Car.jpg" alt>
+  
+      </figure>
+      </div> -->
+
+      <marquee><h1><b>Online Cab Booking</b></h1></marquee>
+      <br><br><br>
+    
+<!-- Navigation -->
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Start Bootstrap</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+
+<header>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <!-- Slide One - Set the background image for this slide in the line below -->
+      <div class="carousel-item active" style="background-image: url('../../assets/cab4.jpg')">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="display-4">Lease a Car</h2>
+          <p class="lead">Drive towards a better living.</p>
+        </div>
+      </div>
+      
+      
+      <!-- Slide Two - Set the background image for this slide in the line below -->
+      <div class="carousel-item" style="background-image: url('../../assets/cab5.jpg')">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="display-4">Second Slide</h2>
+          <p class="lead">This is a description for the second slide.</p>
+        </div>
+      </div>
+      <!-- Slide Three - Set the background image for this slide in the line below -->
+      <div class="carousel-item" style="background-image: url('../../assets/cab6.jpg')">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="display-4">Third Slide</h2>
+          <p class="lead">This is a description for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+  </div>
+</header>
+
+<!-- Page Content -->
+<section class="py-5">
+  <div class="container">
+    <!-- <h1 class="display-4">Online Cab Booking</h1> -->
+    <!-- <p class="lead">The background images for the slider are set directly in the HTML using inline CSS. The images in this snippet are from <a href="https://unsplash.com">Unsplash</a>, taken by <a href="https://unsplash.com/@joannakosinska">Joanna Kosinska</a>!</p> -->
+  </div>
+</section>

@@ -1,0 +1,43 @@
+<div class="a">
+  <div class="div1">
+  <div class="login-box">
+  
+    <h1 style="font-size: 40px;">REGISTER</h1>
+    
+    <form #myForm="ngForm" (ngSubmit)="Register(myForm)" role="form">
+        <p style="font-size: 25px">Username:</p>
+          <input type="text" ngModel name="Name" placeholder="Enter Username" id="txt">	
+          <span id="spn" style="color:red"></span>	
+      
+        <p style="font-size: 25px">Password:</p>
+          <input type="password" ngModel name="Password" placeholder="Enter Password" id="pwd">
+          <span id="spn1" style="color:red"></span>
+          
+        <p style="font-size: 25px">Email:</p>
+        <input type="email" ngModel name="EmailId" placeholder="Enter Email" id="email">
+        <span id="spn1" style="color:red"></span>
+  
+        <p style="font-size: 25px;position: relative;top: 20px">Role:</p>
+        <select class="roleclass" ngModel name="RoleId">
+        <option value=2 selected>Driver</option>
+       
+        <option value=3>CUSTOMER</option>
+        </select>
+  
+        <p style="font-size: 25px">Phone:</p>
+          
+         <input type="phone" ngModel name="MobileNo" placeholder="84********" maxlength="10">
+           <br><br> <input type="submit" class="btn btn-primary" name="submit" value="Submit"> 
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 25px">Already an user?</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+    <a routerLink="/Login" style="font-size: 28px">Login</a>
+    
+    </form>
+  </div>
+  </div>
+  </div> 

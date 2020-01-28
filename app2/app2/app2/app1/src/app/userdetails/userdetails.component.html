@@ -1,0 +1,44 @@
+
+
+<button (click)="GoToRegister()" type="button" class="btn btn-primary">Add New Record</button>
+
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>UserId </th><th>EmailId</th><th>Name</th><th>Password</th><th>MobileNo</th><th>IsOnline </th><th>IsLocked</th><th>RoleId</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of val">
+                <td>{{p.UserId_}}</td>
+                <td>{{p.EmailId__}}</td>
+                <td>{{p.Name}}</td>
+                <td>{{p.Password}}</td>
+                <td>{{p.MobileNo}}</td>
+                <td>{{p.IsOnline_}}</td>
+                <td>{{p.IsLocked_}}</td>
+                <td>{{p.RoleId__}}</td>  
+                <!-- <td><button type="button" (click)="Delete(p.UserId)" class="btn btn-warning">Delete</button></td>             -->
+            </tr>
+        </tbody>
+        <!-- <tbody>
+            <tr *ngFor="let abc of result">
+                
+            </tr>
+        </tbody> -->
+    </table>
+</div>
+
+
+
+<span>
+    {{message}}
+</span>
+
+
+
+
+
+

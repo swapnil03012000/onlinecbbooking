@@ -1,0 +1,51 @@
+
+    <div class="col-md-4"></div>
+    <div class="col-md-4" >
+      <form #myForm="ngForm" (ngSubmit)="SignIn(myForm)">
+      <br>
+      <legend>Sign In</legend>
+    
+      <div class="form-group">
+        <label for="EmailId">Email</label>
+        <input ngModel type="text" class="form-control" id="EmailId" required email name="EmailId" #EmailId="ngModel" #spy>
+        <div *ngIf="EmailId.invalid && (EmailId.dirty || EmailId.touched || EmailId.pristine)" class="alert alert-danger">
+          <div *ngIf="EmailId.errors.required">
+              Email id is required.
+          </div>
+          <div *ngIf="EmailId.errors.email">
+              Email Id must be valid.
+          </div>
+      </div>   
+      </div>
+    
+      <div class="form-group">
+          <label for="Password">Password</label>
+          <input ngModel type="password" class="form-control" id="Password" required minlength="4" maxlength="10" name="Password" #Password="ngModel" #spy>
+          <div *ngIf="Password.invalid && (Password.dirty || Password.touched || Password.pristine)" class="alert alert-danger">
+            <div *ngIf="Password.errors.required">
+                Password is required.
+            </div>
+            <div *ngIf="Password.errors.minlength">
+                Password must be at least 4 characters long.
+            </div>
+        </div>   
+      </div>
+      
+    <div>
+      <input type="checkbox" name="remember" id="" placeholder="Remember me next-time">Remember me Next-Time
+    </div>
+    
+    <div>
+    <a href="/change_password">Forgot Password </a>
+    </div>
+    <div>
+      <button type="submit"  [disabled]="!myForm.form.valid" class="btn btn-primary" style="align-content: center;">Sign In</button> &nbsp;
+      <button type="reset" class="btn btn-primary" style="align-content: center;"> Reset </button>
+    
+    </div>
+    
+    <span>
+      {{message}}
+    </span>
+    </form>
+    </div>
